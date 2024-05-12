@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Wepon : MonoBehaviour
 {
-    public int damage;
-    public int RateOfFire;
+  
     public SpriteRenderer SpriteWepon;
     public Sprite[] SkinsSprite;
     public int IndexSkin;
@@ -17,8 +16,5 @@ public class Wepon : MonoBehaviour
     }
 
     
-    void Update()
-    {
-        
-    }
+    
 }
