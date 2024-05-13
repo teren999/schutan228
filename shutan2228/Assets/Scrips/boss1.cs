@@ -1,8 +1,13 @@
-using UnityEngine;
 
-public class Enemy1and2 : MonoBehaviour
+using UnityEngine;
+using UnityEngine.UI;
+
+
+public class boss1 : MonoBehaviour
 {
-    public int hp;
+    public float maxHp;
+    public float curentHpBoss;
+    public Image fillImage;
     public int damageEnemy;
     public float speed; // Скорость движения врага
     private Transform target; // Цель (игрок)
@@ -10,17 +15,20 @@ public class Enemy1and2 : MonoBehaviour
     public SpriteRenderer spriteEnemy;
     public Transform posPlayer;
     public Animator anim;
-  
 
+
+    
     void Start()
     {
+        curentHpBoss=maxHp;
         target = GameObject.FindGameObjectWithTag("Player").transform; // Находим игрока при старте
         rb = GetComponent<Rigidbody2D>(); // Получаем компонент Rigidbody2D
     }
 
+   
     void Update()
     {
-         Vector3 cursorPosition = posPlayer.position;
+        Vector3 cursorPosition = posPlayer.position;
 
        
         if (transform.position.x < cursorPosition.x)
@@ -34,7 +42,11 @@ public class Enemy1and2 : MonoBehaviour
             spriteEnemy.flipX = true;
         }
     
-        if (hp <= 0)
+
+         float fillAmount = curentHpBoss / maxHp;
+            
+            fillImage.fillAmount = fillAmount;
+        if (curentHpBoss <= 0)
         {
             Destroy(gameObject);
         }
@@ -43,18 +55,7 @@ public class Enemy1and2 : MonoBehaviour
             MoveTowardsPlayer(); 
         }
     }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Bullet"))
-        {
-            hp -= Bullet.Damage;
-        }
-        
-        
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
+         void OnCollisionEnter2D(Collision2D collision)
 {
     if (collision.gameObject.CompareTag("Player") )
     {
@@ -91,4 +92,19 @@ void OnCollisionExit2D(Collision2D collision)
             rb.MovePosition(rb.position + direction * speed * Time.deltaTime);
         }
     }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Bullet"))
+        {
+            curentHpBoss -= Bullet.Damage;
+        }
+        
+        
+    }
 }
+
+    
+    
+
+
+

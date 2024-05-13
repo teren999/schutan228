@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Enemy1and2 : MonoBehaviour
+public class Enemy3 : MonoBehaviour
 {
     public int hp;
     public int damageEnemy;
@@ -10,6 +10,8 @@ public class Enemy1and2 : MonoBehaviour
     public SpriteRenderer spriteEnemy;
     public Transform posPlayer;
     public Animator anim;
+    private bool ismoving=true;
+    public Transform firePoint;
   
 
     void Start()
@@ -50,41 +52,51 @@ public class Enemy1and2 : MonoBehaviour
         {
             hp -= Bullet.Damage;
         }
+        if (collision.CompareTag("oblast") )
+        {
+            ismoving=false;
+        
+            anim.SetBool("hit", true);
+        
+        }
         
         
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-{
-    if (collision.gameObject.CompareTag("Player") )
-    {
-        
-        anim.SetBool("hit", true);
-        
-    }
-}
+    
 
-void OnCollisionExit2D(Collision2D collision)
+
+private void OnTriggerExit2D(Collider2D collision)
 {
-    if (collision.gameObject.CompareTag("Player"))
+    if (collision.gameObject.CompareTag("oblast"))
     {
-        
+        ismoving=true;
         anim.SetBool("hit", false);
         
     }
 }
 
-    public void hitEnemy()
+
+
+  public void hitEnemy()
+{
+    GameObject enemyBullet = ObjectPooler.Instance.SpawnFromPool("EnemyBullet", firePoint.position, Quaternion.identity);
+    if (enemyBullet != null)
     {
-        
-         HpPlayer.currentHp-=damageEnemy;
+        // Направляем пулю в сторону игрока
+        Vector2 direction = (posPlayer.position - firePoint.position).normalized;
+        enemyBullet.transform.right = direction; // Устанавливаем направление взгляда пули в сторону игрока
+        enemyBullet.GetComponent<Rigidbody2D>().velocity = direction * enemyBullet.GetComponent<EnemyBullet>().speed;
     }
+}
+
+
     
     
 
     void MoveTowardsPlayer()
     {
-        if (target != null)
+        if (target != null && ismoving==true)
         {
             // Направляем врага к игроку
             Vector2 direction = (target.position - transform.position).normalized;

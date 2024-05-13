@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class HpPlayer : MonoBehaviour
 {
     public float maxHp;
-    public float currentHp;
+    public static float currentHp;
     public Image fillImage;
     public Text textHp;
      public Color lowHpColor = Color.red;
@@ -14,6 +14,7 @@ public class HpPlayer : MonoBehaviour
     
     void Start()
     {
+        currentHp=maxHp;
         
     }
 
