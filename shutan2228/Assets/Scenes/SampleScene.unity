@@ -1316,6 +1316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 10
+  hpmax: 0
   damageEnemy: 5
   speed: 5
   spriteEnemy: {fileID: 484418599}
@@ -10587,13 +10588,13 @@ MonoBehaviour:
     size: 30
   - tag: Enemy1
     prefab: {fileID: 5532480343269991019, guid: 17b70a7b71302fe4f97978376f539177, type: 3}
-    size: 30
+    size: 10
   - tag: Enemy2
     prefab: {fileID: 6343315651413525784, guid: bcdd2a162e822e24284a9ff969013be3, type: 3}
-    size: 30
+    size: 10
   - tag: Enemy3
     prefab: {fileID: 1447109292973608016, guid: d0cbdc672e41f6c49b295732f731b5de, type: 3}
-    size: 30
+    size: 10
 --- !u!4 &1273528592
 Transform:
   m_ObjectHideFlags: 0
@@ -11579,6 +11580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 10
+  hpmax: 0
   damageEnemy: 5
   speed: 5
   spriteEnemy: {fileID: 2050326812}

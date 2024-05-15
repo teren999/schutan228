@@ -3,6 +3,7 @@ using UnityEngine;
 public class Enemy1and2 : MonoBehaviour
 {
     public int hp;
+    public int hpmax;
     public int damageEnemy;
     public float speed; // Скорость движения врага
     private Transform target; // Цель (игрок)
@@ -10,10 +11,16 @@ public class Enemy1and2 : MonoBehaviour
     public SpriteRenderer spriteEnemy;
     //public Transform posPlayer;
     public Animator anim;
+    private void OnEnable()
+{
+    hp=hpmax;
+    
+}
   
 
     void Start()
     {
+         hp=hpmax;
         target = GameObject.FindGameObjectWithTag("Player").transform; // Находим игрока при старте
         rb = GetComponent<Rigidbody2D>(); // Получаем компонент Rigidbody2D
     }

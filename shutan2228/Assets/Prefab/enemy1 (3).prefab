@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 10
+  hpmax: 10
   damageEnemy: 5
   speed: 5
   spriteEnemy: {fileID: 5642253094092059550}

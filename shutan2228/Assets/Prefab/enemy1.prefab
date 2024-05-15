@@ -163,10 +163,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 20
+  hpmax: 20
   damageEnemy: 5
   speed: 4
   spriteEnemy: {fileID: 3421019291100293717}
-  posPlayer: {fileID: 0}
   anim: {fileID: 6679966047865134001}
 --- !u!95 &6679966047865134001
 Animator:
