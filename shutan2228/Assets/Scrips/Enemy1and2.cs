@@ -8,7 +8,7 @@ public class Enemy1and2 : MonoBehaviour
     private Transform target; // Цель (игрок)
     private Rigidbody2D rb; // Ссылка на Rigidbody2D
     public SpriteRenderer spriteEnemy;
-    public Transform posPlayer;
+    //public Transform posPlayer;
     public Animator anim;
   
 
@@ -20,7 +20,7 @@ public class Enemy1and2 : MonoBehaviour
 
     void Update()
     {
-         Vector3 cursorPosition = posPlayer.position;
+         Vector3 cursorPosition = target.position;
 
        
         if (transform.position.x < cursorPosition.x)
@@ -36,7 +36,7 @@ public class Enemy1and2 : MonoBehaviour
     
         if (hp <= 0)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         else
         {

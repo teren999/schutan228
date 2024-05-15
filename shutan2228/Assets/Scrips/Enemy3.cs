@@ -8,7 +8,7 @@ public class Enemy3 : MonoBehaviour
     private Transform target; // Цель (игрок)
     private Rigidbody2D rb; // Ссылка на Rigidbody2D
     public SpriteRenderer spriteEnemy;
-    public Transform posPlayer;
+    //public Transform posPlayer;
     public Animator anim;
     private bool ismoving=true;
     public Transform firePoint;
@@ -22,7 +22,7 @@ public class Enemy3 : MonoBehaviour
 
     void Update()
     {
-         Vector3 cursorPosition = posPlayer.position;
+         Vector3 cursorPosition = target.position;
 
        
         if (transform.position.x < cursorPosition.x)
@@ -38,7 +38,7 @@ public class Enemy3 : MonoBehaviour
     
         if (hp <= 0)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         else
         {
@@ -84,7 +84,7 @@ private void OnTriggerExit2D(Collider2D collision)
     if (enemyBullet != null)
     {
         // Направляем пулю в сторону игрока
-        Vector2 direction = (posPlayer.position - firePoint.position).normalized;
+        Vector2 direction = (target.position - firePoint.position).normalized;
         enemyBullet.transform.right = direction; // Устанавливаем направление взгляда пули в сторону игрока
         enemyBullet.GetComponent<Rigidbody2D>().velocity = direction * enemyBullet.GetComponent<EnemyBullet>().speed;
     }

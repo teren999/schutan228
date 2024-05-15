@@ -17,9 +17,9 @@ TagManager:
   - Wall
   - bullet
   - oblast
-  - 
-  - 
-  - 
+  - spawner
+  - player
+  - enemybullet
   - 
   - 
   - 
