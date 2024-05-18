@@ -46,6 +46,7 @@ public class Enemy1and2 : MonoBehaviour
              GameObject coins = ObjectPooler.Instance.SpawnFromPool("coins", transform.position, Quaternion.identity);
             gameObject.SetActive(false);
             GameManager.scoreEnemy++;
+            GameManager.liveEnemy--;
         }
         else
         {

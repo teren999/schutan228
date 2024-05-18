@@ -10,6 +10,7 @@ public class HpPlayer : MonoBehaviour
     public Text textHp;
      public Color lowHpColor = Color.red;
     public Color highHpColor = Color.white;
+    public GameObject DieCanvas;
 
     
     void Start()
@@ -34,6 +35,12 @@ public class HpPlayer : MonoBehaviour
         else
         {
             fillImage.color = highHpColor; 
+        }
+        if(currentHp<=0)
+        {
+            Time.timeScale=0;
+            DieCanvas.SetActive(true);
+
         }
     }
 }

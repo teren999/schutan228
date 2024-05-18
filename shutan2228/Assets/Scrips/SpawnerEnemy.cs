@@ -19,6 +19,7 @@ public class SpawnerEnemy : MonoBehaviour
             {
                 nexEnemy = Time.time + nexEnemyRate;
                  GameObject Enemy1 = ObjectPooler.Instance.SpawnFromPool("Enemy1", PosSpawner.position, Quaternion.identity);
+                 GameManager.liveEnemy++;
             }
     }
 }

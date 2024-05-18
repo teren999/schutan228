@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
      public GameObject Boss;
      public GameObject allSpawners;
      public GameObject canvaseScore;
+     public static int liveEnemy=0;
+     public GameObject WinCanvas;
 
     void Update()
     {
@@ -19,6 +21,12 @@ public class GameManager : MonoBehaviour
 
             Boss.SetActive(true);
             allSpawners.SetActive(false);
+
+        }
+        if(boss1.curentHpBoss<=0 && liveEnemy<=0)
+        {
+            Time.timeScale=0;
+            WinCanvas.SetActive(true);
 
         }
 

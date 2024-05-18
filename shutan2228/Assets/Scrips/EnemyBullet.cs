@@ -13,6 +13,7 @@ public class EnemyBullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        gameObject.SetActive(false);
         // Если пуля врага сталкивается с игроком, наносим урон и отключаем пулю
         if (collision.CompareTag("Player"))
         {
