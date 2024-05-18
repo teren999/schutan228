@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class boss1 : MonoBehaviour
 {
     public float maxHp;
-    public float curentHpBoss;
+    public static float curentHpBoss=100;
     public Image fillImage;
     public int damageEnemy;
     public float speed; // Скорость движения врага
@@ -15,9 +15,22 @@ public class boss1 : MonoBehaviour
     public SpriteRenderer spriteEnemy;
     public Transform posPlayer;
     public Animator anim;
+    public GameObject canvase;
 
 
-    
+  
+    private void OnEnable()
+    {
+        canvase.SetActive(true);
+        
+    }
+
+   
+    private void OnDisable()
+    {
+
+        canvase.SetActive(false);
+    }
     void Start()
     {
         curentHpBoss=maxHp;
@@ -48,7 +61,7 @@ public class boss1 : MonoBehaviour
             fillImage.fillAmount = fillAmount;
         if (curentHpBoss <= 0)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         else
         {

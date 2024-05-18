@@ -47,7 +47,9 @@ private void OnEnable()
     
         if (hp <= 0)
         {
+             GameObject coins = ObjectPooler.Instance.SpawnFromPool("coins", transform.position, Quaternion.identity);
             gameObject.SetActive(false);
+            GameManager.scoreEnemy++;
         }
         else
         {
