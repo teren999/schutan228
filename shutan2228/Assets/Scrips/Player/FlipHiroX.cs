@@ -5,8 +5,7 @@ using UnityEngine;
 public class FlipHiroX : MonoBehaviour
 {
     public SpriteRenderer spriteRendererHiro;
-    public SpriteRenderer spriteRendererHat;
-
+   
    
     public Camera mainCamera;
 
@@ -19,12 +18,12 @@ public class FlipHiroX : MonoBehaviour
        
         if (transform.position.x < cursorPosition.x)
         {
-            spriteRendererHat.flipX =false;
+            
             spriteRendererHiro.flipX = false;
         }
         else
         {
-            spriteRendererHat.flipX = true;
+            
             spriteRendererHiro.flipX = true;
         }
     }

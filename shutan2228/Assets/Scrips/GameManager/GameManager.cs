@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
         if(boss1.curentHpBoss<=0 && liveEnemy<=0)
         {
             Time.timeScale=0;
+            
             WinCanvas.SetActive(true);
 
         }
