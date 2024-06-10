@@ -1,5 +1,7 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -25,11 +27,19 @@ public class GameManager : MonoBehaviour
         }
         if(boss1.curentHpBoss<=0 && liveEnemy<=0)
         {
-            Time.timeScale=0;
-            
-            WinCanvas.SetActive(true);
-
+            StartCoroutine(Wait(5));
+           
         }
+    
+
+    }
+
+    IEnumerator Wait(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+         Time.timeScale=0;
+            
+         WinCanvas.SetActive(true);
 
     }
 }
