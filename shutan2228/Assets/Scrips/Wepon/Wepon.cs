@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Wepon : MonoBehaviour
@@ -7,13 +6,24 @@ public class Wepon : MonoBehaviour
   
     public SpriteRenderer SpriteWepon;
     public Sprite[] SkinsSprite;
-    public int IndexSkin;
+    public static int IndexSkin;
     
     void Start()
     {
+        IndexSkin = PlayerPrefs.GetInt("indexxskin");
         SpriteWepon.sprite = SkinsSprite[IndexSkin];
         
     }
+
+    public void ChangeSkin(int index)
+    {
+        IndexSkin = index;
+        SpriteWepon.sprite = SkinsSprite[IndexSkin];
+    }
+
+    
+
+
 
     
     

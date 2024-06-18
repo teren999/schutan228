@@ -469,6 +469,7 @@ GameObject:
   - component: {fileID: 127817472}
   - component: {fileID: 127817473}
   - component: {fileID: 127817474}
+  - component: {fileID: 127817475}
   m_Layer: 10
   m_Name: gauns
   m_TagString: Untagged
@@ -489,16 +490,16 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 253984142}
-  - {fileID: 1838270999}
   - {fileID: 1588024566}
   - {fileID: 695710717}
-  - {fileID: 1895213053}
-  - {fileID: 260581434}
-  - {fileID: 445545265}
+  - {fileID: 1838270999}
   - {fileID: 227495348}
-  - {fileID: 1580228962}
+  - {fileID: 253984142}
+  - {fileID: 1895213053}
   - {fileID: 846869960}
+  - {fileID: 260581434}
+  - {fileID: 1580228962}
+  - {fileID: 445545265}
   m_Father: {fileID: 592782942}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -717.79}
 --- !u!114 &127817473
@@ -528,6 +529,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wepon: {fileID: 127817472}
   mainCamera: {fileID: 519420031}
+--- !u!114 &127817475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127817471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62d006a451e6a6a4299c40c778860c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wepons:
+  - {fileID: 1588024565}
+  - {fileID: 695710716}
+  - {fileID: 1838270998}
+  - {fileID: 227495347}
+  - {fileID: 253984141}
+  - {fileID: 1895213052}
+  - {fileID: 846869959}
+  - {fileID: 260581433}
+  - {fileID: 1580228961}
+  - {fileID: 445545264}
+  index: 6
+  indexSkin: 9
 --- !u!1 &144387798
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,7 +750,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &227495348
 Transform:
   m_ObjectHideFlags: 0
@@ -775,7 +801,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9ae9ba316d5b2424c85c0a9317a57546, type: 3}
   - {fileID: 21300000, guid: ecc58cc631a83874ca39dd23515b48fb, type: 3}
   - {fileID: 21300000, guid: 14c7b9dd05a84a04097fd5488a061e36, type: 3}
-  IndexSkin: 15
 --- !u!114 &227495350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -788,6 +813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15de50fae6975994aaa1e9b188e983c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: 8
   bulletPrefab: {fileID: 6072894249708029362, guid: 9c275b2b3ff1ace4b85bff48a04a857e, type: 3}
   firePoint: {fileID: 95019789}
   directionPoint: {fileID: 1023914862}
@@ -864,6 +890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb982787479cae149817e6ef29275e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: 3
   firePoint: {fileID: 95019789}
   directionPoint1: {fileID: 1023914862}
   directionPoint2: {fileID: 1836457997}
@@ -1075,7 +1102,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b335b4ceb0d2e56499ed5d20bcab1bd2, type: 3}
   - {fileID: 21300000, guid: 9d242f8a657288644aeed250dad6074e, type: 3}
   - {fileID: 21300000, guid: 717cdde3ba5f393459e533b4a7646664, type: 3}
-  IndexSkin: 11
 --- !u!114 &253984147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1088,6 +1114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15de50fae6975994aaa1e9b188e983c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: 4
   bulletPrefab: {fileID: 6072894249708029362, guid: 9c275b2b3ff1ace4b85bff48a04a857e, type: 3}
   firePoint: {fileID: 881189760}
   directionPoint: {fileID: 1736749732}
@@ -1242,7 +1269,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0b6a5005ddae35a448dcab5e52243c0f, type: 3}
   - {fileID: 21300000, guid: b50863d2dece3c14c8cbcbc1208b7f7d, type: 3}
   - {fileID: 21300000, guid: bc910ff6216d3954e9ad0764546446ee, type: 3}
-  IndexSkin: 11
 --- !u!114 &260581436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1255,6 +1281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15de50fae6975994aaa1e9b188e983c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: 6
   bulletPrefab: {fileID: 6072894249708029362, guid: 9c275b2b3ff1ace4b85bff48a04a857e, type: 3}
   firePoint: {fileID: 1964676577}
   directionPoint: {fileID: 1830506248}
@@ -1331,13 +1358,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d87d187429209914792632a816dda64f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: 7
   firePoint: {fileID: 1964676577}
   directionPoint: {fileID: 1830506248}
   fireRate: 0.5
   reloadTime: 2
   damage: 20
   lvl: 0
-  ScaleLvlDamage: 0
+  ScaleLvlDamage: 5
   ammo: 30
   ammomax: 30
   ammoText: {fileID: 234637581}
@@ -1956,7 +1984,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 18a45511e7294fc47b5d9752e5d95dc0, type: 3}
   - {fileID: 21300000, guid: 7ec1d54fa37a67448adb55a5adf0ba19, type: 3}
   - {fileID: 21300000, guid: 4796a4b569ee31649a548b4bec178db6, type: 3}
-  IndexSkin: 9
 --- !u!114 &445545267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1969,6 +1996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15de50fae6975994aaa1e9b188e983c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: 9
   bulletPrefab: {fileID: 6072894249708029362, guid: 9c275b2b3ff1ace4b85bff48a04a857e, type: 3}
   firePoint: {fileID: 1349862322}
   directionPoint: {fileID: 1349066251}
@@ -2659,7 +2687,7 @@ MonoBehaviour:
   - {fileID: 7400000, guid: b2c47ce236180ed4bac91ac9c201285e, type: 2}
   - {fileID: 7400000, guid: 5554d9e1548871e438dd5acc99fc340c, type: 2}
   - {fileID: 7400000, guid: 02f8d7f70aa3c36459d295828b6e54e8, type: 2}
-  index: 13
+  index: 18
 --- !u!61 &592782947
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2864,7 +2892,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 080207bfa8cade5489a914c8fad830b7, type: 3}
   - {fileID: 21300000, guid: d4d6a37f40831cc4b9cce897be371b2e, type: 3}
   - {fileID: 21300000, guid: a492d6c778ec40847b0dd852a64c3ac4, type: 3}
-  IndexSkin: 6
 --- !u!114 &695710719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2877,6 +2904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15de50fae6975994aaa1e9b188e983c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: 1
   bulletPrefab: {fileID: 6072894249708029362, guid: 9c275b2b3ff1ace4b85bff48a04a857e, type: 3}
   firePoint: {fileID: 1815970924}
   directionPoint: {fileID: 1047629884}
@@ -4605,7 +4633,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.5, y: 0.5, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -4934,16 +4962,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpriteWepon: {fileID: 846869963}
   SkinsSprite:
-  - {fileID: 21300000, guid: cf0edb44e93ca3145a0e3c9846faefea, type: 3}
-  - {fileID: 21300000, guid: edc5fae9efe8aa24d9a63733745fcf5e, type: 3}
-  - {fileID: 21300000, guid: df8f81de0c9fd8245bee5e59c76e93b4, type: 3}
-  - {fileID: 21300000, guid: 904b3bf07042baa4cbdaa16d9bddbf4d, type: 3}
-  - {fileID: 21300000, guid: 20f5838434f880940b1984c048d58f79, type: 3}
-  - {fileID: 21300000, guid: eb2c6668f9d46e249a027b77bfcf00d6, type: 3}
-  - {fileID: 21300000, guid: ad7465503db7e0d4baa7e21e9e711cf4, type: 3}
-  - {fileID: 21300000, guid: 7457a58c8b5b7bf4989c63476e7a599d, type: 3}
-  - {fileID: 21300000, guid: 301bf4e6e8bb21b4c92311cf52a830f6, type: 3}
-  IndexSkin: 0
+  - {fileID: 21300000, guid: e9683088df8f4eb4fb3dbc829663bb15, type: 3}
+  - {fileID: 21300000, guid: 02a6f2764f06e5c448267ce5082cc255, type: 3}
+  - {fileID: 21300000, guid: 27753c8548a427144a3db6438e195f9f, type: 3}
+  - {fileID: 21300000, guid: 2c1bce5009ace1d488edac66303db3de, type: 3}
+  - {fileID: 21300000, guid: 426bc3745238c3a439c0dee4f6f0ddb1, type: 3}
+  - {fileID: 21300000, guid: f38ef5746adf3ad4f8e0b5e2ac16c469, type: 3}
+  - {fileID: 21300000, guid: b35b4cf9da1d0b044889e3e0fdf45a83, type: 3}
+  - {fileID: 21300000, guid: bee09be0e3c9f1a4c9ed79152087c9f4, type: 3}
+  - {fileID: 21300000, guid: 5ceef4716c048c54389a3608798d0c47, type: 3}
+  - {fileID: 21300000, guid: 5bda0fdfe27e3554996ffd96579fbbbb, type: 3}
+  - {fileID: 21300000, guid: acb1618ef54f5ba41b3ca0a82a1dcd9c, type: 3}
+  - {fileID: 21300000, guid: b7987ac1a57b0f84b9ad9edc278eb9a2, type: 3}
+  - {fileID: 21300000, guid: 0ba300e5d7698034cb3513d9c54b0ddc, type: 3}
+  - {fileID: 21300000, guid: a7774608387a4364da05e98dc99ef981, type: 3}
+  - {fileID: 21300000, guid: f670555219d4c8c4993606b19ea1b46d, type: 3}
+  - {fileID: 21300000, guid: 0f64fd97ea665a241aece44ff99442b1, type: 3}
 --- !u!114 &846869962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4956,6 +4990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15de50fae6975994aaa1e9b188e983c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: 6
   bulletPrefab: {fileID: 6072894249708029362, guid: 9c275b2b3ff1ace4b85bff48a04a857e, type: 3}
   firePoint: {fileID: 1444597791}
   directionPoint: {fileID: 19276998}
@@ -5009,12 +5044,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: cf0edb44e93ca3145a0e3c9846faefea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e9683088df8f4eb4fb3dbc829663bb15, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.64, y: 0.37}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -13169,16 +13204,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpriteWepon: {fileID: 1580228965}
   SkinsSprite:
-  - {fileID: 21300000, guid: 72a7c7b837148b34bb85fc3fe10fe7b1, type: 3}
-  - {fileID: 21300000, guid: edc5fae9efe8aa24d9a63733745fcf5e, type: 3}
-  - {fileID: 21300000, guid: df8f81de0c9fd8245bee5e59c76e93b4, type: 3}
-  - {fileID: 21300000, guid: 904b3bf07042baa4cbdaa16d9bddbf4d, type: 3}
-  - {fileID: 21300000, guid: 20f5838434f880940b1984c048d58f79, type: 3}
-  - {fileID: 21300000, guid: eb2c6668f9d46e249a027b77bfcf00d6, type: 3}
-  - {fileID: 21300000, guid: ad7465503db7e0d4baa7e21e9e711cf4, type: 3}
-  - {fileID: 21300000, guid: 7457a58c8b5b7bf4989c63476e7a599d, type: 3}
-  - {fileID: 21300000, guid: 301bf4e6e8bb21b4c92311cf52a830f6, type: 3}
-  IndexSkin: 0
+  - {fileID: 21300000, guid: c9539018c8bacfe448e23fe3f9b55d98, type: 3}
+  - {fileID: 21300000, guid: 3b4c46ba5d3acaa4bacdfb6c5e1e98cd, type: 3}
+  - {fileID: 21300000, guid: fc5667daa13c67b4bbcc9b5e2bd1e6fe, type: 3}
+  - {fileID: 21300000, guid: 563893d51c5bc2647b89a98dc82a7560, type: 3}
+  - {fileID: 21300000, guid: a74e6ed7edd1dd548b4ab67b26be7110, type: 3}
+  - {fileID: 21300000, guid: 537e6bf6fc10c4a4391102f85ea00392, type: 3}
+  - {fileID: 21300000, guid: 9f74530a829518f4a8069c34e0e162e9, type: 3}
+  - {fileID: 21300000, guid: 703d17d51b6137c4c8f91223c929b0da, type: 3}
+  - {fileID: 21300000, guid: 3996a59f476529e4ebee5ddec8b88f6f, type: 3}
+  - {fileID: 21300000, guid: b6b613d279b476e458fed9a6cf3f4262, type: 3}
+  - {fileID: 21300000, guid: 0494084548c98ab42b80898ba1e64853, type: 3}
+  - {fileID: 21300000, guid: 152a769d62d8deb4fb5df98939209e70, type: 3}
+  - {fileID: 21300000, guid: b17407cc54fc89342a8e39212da25a2a, type: 3}
+  - {fileID: 21300000, guid: 01358e13ea31aac40acd41d8d45374b9, type: 3}
+  - {fileID: 21300000, guid: 38ac436b0b4145043a405689ffe797c9, type: 3}
+  - {fileID: 21300000, guid: dd74f8ddc88925d4bb8d804d71c56475, type: 3}
 --- !u!114 &1580228964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13191,6 +13232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15de50fae6975994aaa1e9b188e983c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: 8
   bulletPrefab: {fileID: 6072894249708029362, guid: 9c275b2b3ff1ace4b85bff48a04a857e, type: 3}
   firePoint: {fileID: 1588252811}
   directionPoint: {fileID: 1855639953}
@@ -13244,12 +13286,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 72a7c7b837148b34bb85fc3fe10fe7b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c9539018c8bacfe448e23fe3f9b55d98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.64, y: 0.37}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -13352,7 +13394,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b33e99ad9e924264382213468e38be60, type: 3}
   - {fileID: 21300000, guid: ef6954f6c388e4644b89494b547f9b23, type: 3}
   - {fileID: 21300000, guid: e85136d3a8ef86b41a90e6c194fbcb07, type: 3}
-  IndexSkin: 4
 --- !u!114 &1588024568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13365,6 +13406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15de50fae6975994aaa1e9b188e983c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: 0
   bulletPrefab: {fileID: 6072894249708029362, guid: 9c275b2b3ff1ace4b85bff48a04a857e, type: 3}
   firePoint: {fileID: 1580830086}
   directionPoint: {fileID: 1828399210}
@@ -14154,7 +14196,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4ed5e82309698ec4484fa4251b6d2fc8, type: 3}
   - {fileID: 21300000, guid: db95c29090056cf4aa9c0e33a89fa218, type: 3}
   - {fileID: 21300000, guid: 8a96592ceec3e9c4ebeed61a1602aa84, type: 3}
-  IndexSkin: 15
 --- !u!114 &1838271001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14167,6 +14208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15de50fae6975994aaa1e9b188e983c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: 2
   bulletPrefab: {fileID: 6072894249708029362, guid: 9c275b2b3ff1ace4b85bff48a04a857e, type: 3}
   firePoint: {fileID: 2144744909}
   directionPoint: {fileID: 1247536271}
@@ -14528,7 +14570,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f78ef9fe001710748bf05cdfcc62d635, type: 3}
   - {fileID: 21300000, guid: aded7b276132c8445ab4345fc4816f59, type: 3}
   - {fileID: 21300000, guid: cc79e73b4d593c14c80f0459203de886, type: 3}
-  IndexSkin: 14
 --- !u!114 &1895213055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14541,6 +14582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15de50fae6975994aaa1e9b188e983c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: 5
   bulletPrefab: {fileID: 6072894249708029362, guid: 9c275b2b3ff1ace4b85bff48a04a857e, type: 3}
   firePoint: {fileID: 1365417382}
   directionPoint: {fileID: 1723237636}

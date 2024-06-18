@@ -1,10 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 
 public class FireLolGun : MonoBehaviour
 {
+    public string weaponName;
      public Transform firePoint;
     public Transform directionPoint;
     public float fireRate = 0.5f;
@@ -24,6 +24,7 @@ public class FireLolGun : MonoBehaviour
 
     void Start()
     {
+        lvl = PlayerPrefs.GetInt(weaponName + "_level");
         damage = damage + (lvl * ScaleLvlDamage);
         Bullet.Damage = damage;
     }

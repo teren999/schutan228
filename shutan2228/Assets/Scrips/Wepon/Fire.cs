@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class Fire : MonoBehaviour
 {
+    public string weaponName;
     public GameObject bulletPrefab;
     public Transform firePoint;
     public Transform directionPoint;
@@ -23,6 +24,7 @@ public class Fire : MonoBehaviour
 
     void Start()
     {
+        lvl = PlayerPrefs.GetInt(weaponName + "_level");
         damage = damage + (lvl * ScaleLvlDamage);
         Bullet.Damage = damage;
     }
@@ -88,4 +90,6 @@ public class Fire : MonoBehaviour
         ammo = ammomax; // Полная перезарядка
         // Здесь можно добавить анимацию или другие действия, связанные с завершением перезарядки
     }
+
+     
 }

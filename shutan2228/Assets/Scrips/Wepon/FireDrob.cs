@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class FireDrob : MonoBehaviour
 {
-    
+    public string weaponName;
     public Transform firePoint;
     public Transform directionPoint1;
     public Transform directionPoint2;
@@ -27,7 +27,8 @@ public class FireDrob : MonoBehaviour
     public GameObject reloutext;
 
     void Start()
-    {
+    { 
+        lvl = PlayerPrefs.GetInt(weaponName + "_level");
         damage = damage + (lvl * ScaleLvlDamage);
         Bullet.Damage = damage;
     }
